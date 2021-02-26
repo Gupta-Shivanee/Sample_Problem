@@ -1,10 +1,10 @@
-def tax(k,str)
-  array = Array.new
+def tax(k, str)
+  array = []
   array = str.map { |n| n.split(" at ") }
   total = 0.0
   sales_taxes = 0.0
   puts "\nOutput #{k}\n"
-  array.each do |item,price|
+  array.each do |item, price|
     price = price.to_f
     temp1 = 0.0
     temp2 = 0.0
@@ -27,6 +27,6 @@ puts "\nInput 2 \n"
 puts str2
 puts "\nInput 3 \n"
 puts str3
-tax(1,str1)
-tax(2,str2)
-tax(3,str3)
+tax(1, str1)
+tax(2, str2)
+tax(3, str3)

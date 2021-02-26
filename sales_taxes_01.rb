@@ -1,17 +1,17 @@
 module Importable
-  def Importable.imported(price)
+  def self.imported(price)
     price = price * 0.05
     price
   end
 end
 class Parent
   def tax(str)
-    array = Array.new
+    array = []
     array = str.map { |n| n.split(" at ")}
     total = 0.0
     sales_taxes = 0.0
     puts "\nOutput\n"
-    array.each do |item,price|
+    array.each do |item, price|
       price = price.to_f
       temp1 = 0.0
       temp2 = 0.0
